@@ -99,8 +99,8 @@ class MovieDetailSerializer(serializers.ModelSerializer):
 
 
 class MovieSessionDetailSerializer(serializers.ModelSerializer):
-    movie = MovieListSerializer()
-    cinema_hall = CinemaHallDetailSerializer()
+    movie = MovieListSerializer(read_only=True)
+    cinema_hall = CinemaHallDetailSerializer(read_only=True)
 
     class Meta:
         model = MovieSession
